@@ -10,6 +10,6 @@ RUN cd /tmp/fdw \
       && git checkout REL-5_2_6 \
       && ./autogen.sh --with-legacy \
       && sed -i 's/D_POSIX_SOURCE/D_GNU_SOURCE/' mongo-c-driver/Makefile \
-      && make ; exit 0
-
-RUN cd /tmp/fdw && make clean && make && make install
+      && make \
+      && make install \
+      && make clean
