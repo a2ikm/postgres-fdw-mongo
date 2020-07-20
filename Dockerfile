@@ -12,4 +12,5 @@ RUN cd /tmp/fdw \
       && sed -i 's/D_POSIX_SOURCE/D_GNU_SOURCE/' mongo-c-driver/Makefile \
       && make \
       && make install \
-      && make clean
+      && make clean \
+      && ldconfig
